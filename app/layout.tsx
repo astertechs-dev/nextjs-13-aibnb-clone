@@ -1,7 +1,9 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
-import { M_PLUS_Rounded_1c } from 'next/font/google' 
+import { M_PLUS_Rounded_1c } from 'next/font/google'
+
+import Navbar from './components/navbar/Navbar'
 
 export const metadata: Metadata = {
   title: 'Airbnb',
@@ -21,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={font.className}>
+        <Navbar />
         {children}
       </body>
     </html>
