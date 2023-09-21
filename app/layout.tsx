@@ -5,6 +5,7 @@ import { M_PLUS_Rounded_1c } from 'next/font/google'
 
 import Navbar from './components/navbar/Navbar'
 import ClientOnly from './components/ClientOnly'
+import RegisterModal from './components/modals/RegisterModal'
 
 export const metadata: Metadata = {
   title: 'Airbnb',
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className={font.className}>
         <ClientOnly>
+          <RegisterModal />
           <Navbar />
         </ClientOnly>
         {children}
